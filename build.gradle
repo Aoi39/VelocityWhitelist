@@ -64,4 +64,5 @@ shadowJar {
         include "LICENSE"
         into "."
     }
+    archiveClassifier.set("")
 }
