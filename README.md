@@ -37,4 +37,4 @@ The "**velocitywhitelist**" portion of the above command list can be replaced wi
 4. (If necessary) replace the generated whitelist.json with the previously used one.
 
 ## Contact / Support
-If you need help or want to contact me, please join my [Discord Server]([https://discord.gg/yefxV4839M](https://discord.gg/yefxV4839M))  
+If you need help or want to contact me, please join my [Discord Server](https://discord.gg/yefxV4839M)  
