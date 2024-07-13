@@ -1,0 +1,12 @@
+[General]
+    enableWhitelist=true # Boolean, Enable whitelist or not
+    kickMessage="Your are not in the whitelist!" # String, Message displayed when a player not included in the whitelist is kicked
+    kickMessageColorRed=255 # Int, Red in RGB for the color displayed in the kick message
+    kickMessageColorGreen=0 # Int, Green in RGB for the color displayed in the kick message
+    kickMessageColorBlue=0 # Int, Blue in RGB for the color displayed in the kick message
+
+[Logs]
+    notifyInGameNonWhitelistPlayerJoin=false # Boolean, Notify in-game when a player not included in the whitelist attempts to join (all players will be notified).
+
+[System]
+    configVersion="1.0.0" # Config version, if you do not know what this is, you should not change it.
