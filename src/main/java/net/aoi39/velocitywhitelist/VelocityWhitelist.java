@@ -20,7 +20,7 @@ import java.nio.file.Path;
 @Plugin(
         id = "velocitywhitelist",
         name = "VelocityWhitelist",
-        version = "1.0.0",
+        version = "1.0.1",
         description = "Set up whitelist on the Velocity side",
         url = "https://github.com/Aoi39/VelocityWhitelist",
         authors = { "Aoi39" }

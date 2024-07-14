@@ -26,7 +26,7 @@ public class PlayerLoginListener {
     private void onLogin(LoginEvent event) {
         if (Config.enableWhitelist) {
             if (!WhitelistManager.whitelistUniqueIds.contains(String.valueOf(event.getPlayer().getUniqueId()))) {
-                event.setResult(ResultedEvent.ComponentResult.denied(Component.text(Config.kickMessage).color(TextColor.color(Config.kickMessageColorRed, Config.kickMessageColorGreen, Config.kickMessageColorBlue))));
+                event.setResult(ResultedEvent.ComponentResult.denied(Component.text(Config.kickMessage).color(TextColor.fromHexString(Config.kickMessageColor))));
                 if (Config.notifyInGameNonWhitelistPlayerJoin) {
                     for (RegisteredServer server : plugin.getServer().getAllServers()) {
                         server.sendMessage(VelocityWhitelist.chatPrefix.append(Component.text("Non whitelisted player " + event.getPlayer().getUsername() + " attempted to join the server").color(TextColor.color(255, 255, 0))));

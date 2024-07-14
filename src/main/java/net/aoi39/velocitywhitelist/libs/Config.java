@@ -14,9 +14,7 @@ public class Config {
 
     public static boolean enableWhitelist;
     public static String kickMessage;
-    public static int kickMessageColorRed;
-    public static int kickMessageColorGreen;
-    public static int kickMessageColorBlue;
+    public static String kickMessageColor;
     public static boolean notifyInGameNonWhitelistPlayerJoin;
 
     public Config(VelocityWhitelist plugin, Path dataDirectory) {
@@ -42,9 +40,7 @@ public class Config {
         VelocityWhitelist.getLogger().info("Loading config...");
         enableWhitelist = config.getBoolean("General.enableWhitelist");
         kickMessage = config.getString("General.kickMessage");
-        kickMessageColorRed = config.getLong("General.kickMessageColorRed").intValue();
-        kickMessageColorGreen = config.getLong("General.kickMessageColorGreen").intValue();
-        kickMessageColorBlue = config.getLong("General.kickMessageColorBlue").intValue();
+        kickMessageColor = config.getString("General.kickMessageColor");
         notifyInGameNonWhitelistPlayerJoin = config.getBoolean("Logs.notifyInGameNonWhitelistPlayerJoin");
         VelocityWhitelist.getLogger().info("Success config load!");
     }
