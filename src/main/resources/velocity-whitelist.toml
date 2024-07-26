@@ -1,10 +1,27 @@
 [General]
-    enableWhitelist=true # Boolean, Enable whitelist or not
-    kickMessage="Your are not in the whitelist!" # String, Message displayed when a player not included in the whitelist is kicked
-    kickMessageColor="#ff0000" # String, Hex for the color displayed in the kick message
+    # Boolean
+    # Enable whitelist or not.
+    enableWhitelist=true
+
+    # Boolean
+    # Whether to use UUIDs to check if a player is on the white list.
+    useUUIDForChecking=true
+
+    # String
+    # Message displayed when a player not included in the whitelist is kicked.
+    kickMessage="Your are not in the whitelist!"
+
+    # String
+    # Hex for the color displayed in the kick message.
+    kickMessageColor="#ff0000"
 
 [Logs]
-    notifyInGameNonWhitelistPlayerJoin=false # Boolean, Notify in-game when a player not included in the whitelist attempts to join (all players will be notified).
+    # Boolean
+    # Notify in-game when a player not included in the whitelist attempts to join (all players will be notified).
+    notifyInGameNonWhitelistPlayerJoin=false
 
 [System]
-    configVersion="1.0.1" # Config version, if you do not know what this is, you should not change it.
+    # String
+    # Config version
+    # if you do not know what this is, you should not change it.
+    configVersion="1.0.2"

@@ -63,7 +63,7 @@ public class WhitelistCommand {
                                 return;
                             }
                             Config.enableWhitelist = true;
-                            invocation.source().sendMessage(VelocityWhitelist.chatPrefix.append(Component.text("Whitelist enabled(After rebooting, config file settings will be used)").color(TextColor.color(255, 255, 255))));
+                            invocation.source().sendMessage(VelocityWhitelist.chatPrefix.append(Component.text("Whitelist enabled").color(TextColor.color(255, 255, 255))));
                             return;
                         }
 
@@ -73,7 +73,7 @@ public class WhitelistCommand {
                                 return;
                             }
                             Config.enableWhitelist = false;
-                            invocation.source().sendMessage(VelocityWhitelist.chatPrefix.append(Component.text("Whitelist disable(After rebooting, config file settings will be used)").color(TextColor.color(255, 255, 255))));
+                            invocation.source().sendMessage(VelocityWhitelist.chatPrefix.append(Component.text("Whitelist disable").color(TextColor.color(255, 255, 255))));
                             return;
                         }
 

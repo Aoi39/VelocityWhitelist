@@ -131,7 +131,7 @@ public class WhitelistManager {
     }
 
     public static void updateWhitelistPlayerName(Player player) {
-        if (!whitelistUserNames.contains(player.getUsername()) && whitelistUniqueIds.contains(String.valueOf(player.getUniqueId()))) {
+        if ( Config.useUUIDForChecking && !whitelistUserNames.contains(player.getUsername()) && whitelistUniqueIds.contains(String.valueOf(player.getUniqueId()))) {
             for (JsonElement element : whitelist) {
                 if (element.isJsonObject()) {
                     JsonObject playerData = element.getAsJsonObject();

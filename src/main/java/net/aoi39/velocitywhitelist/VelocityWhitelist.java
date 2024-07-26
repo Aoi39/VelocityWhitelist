@@ -3,6 +3,7 @@ package net.aoi39.velocitywhitelist;
 import com.google.inject.Inject;
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent;
 import com.velocitypowered.api.event.Subscribe;
+import com.velocitypowered.api.event.proxy.ProxyShutdownEvent;
 import com.velocitypowered.api.plugin.Plugin;
 import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import com.velocitypowered.api.proxy.ProxyServer;
@@ -20,7 +21,7 @@ import java.nio.file.Path;
 @Plugin(
         id = "velocitywhitelist",
         name = "VelocityWhitelist",
-        version = "1.0.1",
+        version = "1.0.2",
         description = "Set up whitelist on the Velocity side",
         url = "https://github.com/Aoi39/VelocityWhitelist",
         authors = { "Aoi39" }
@@ -48,10 +49,15 @@ public class VelocityWhitelist {
     }
 
     @Subscribe
-    public void onProxyInitialize(ProxyInitializeEvent event) {
+    private void onProxyInitialize(ProxyInitializeEvent event) {
         logger.info("VelocityWhitelist initialized!");
-        new PlayerLoginListener(this, dataDirectory);
+        new PlayerLoginListener(this);
         new WhitelistCommand(this, dataDirectory);
+    }
+
+    @Subscribe
+    private void onProxyShutdown(ProxyShutdownEvent event) {
+        Config.saveConfig(dataDirectory);
     }
 
 }
